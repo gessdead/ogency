@@ -1,0 +1,162 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=latin,cyrillic);
+
+@osans:'Open Sans Condensed', sans-serif;
+
+//b-point
+@screen-sm: 768px;
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  color: #000;
+  box-sizing: border-box;
+  border: none;
+}
+
+body {
+  font-family: @osans;
+  width: 100%;
+}
+
+.page-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 20px;
+  @media (min-width: @screen-sm) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-size: 72px;
+    font-weight: 700;
+    @media (min-width: @screen-sm) {
+      font-size: 82px;
+    }
+    span {
+      color: #ff1e1c;
+    }
+  }
+
+
+  &__phone {
+    font-size: 40px;
+    font-weight: 700;
+    padding-top: 35px;
+    @media (min-width: @screen-sm) {
+      font-size: 50px;
+    }
+  }
+}
+
+.container {
+  text-align: center;
+  min-width: 310px;
+  margin: 0 auto;
+  padding: 0 20px 100px;
+  @media (min-width: @screen-sm) {
+    max-width: 66%;
+  }
+}
+
+.page-title {
+  font-size: 46px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding:50px 0;
+  @media (min-width: @screen-sm) {
+    font-size: 56px;
+    }
+}
+
+.page-content {
+  font-size: 26px;
+  padding-bottom: 50px;
+  @media (min-width: @screen-sm) {
+    font-size: 36px;
+    }
+  a {
+    border-bottom: 1px solid #ff001e;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &:nth-child(3){
+    padding-bottom: 0;
+  }
+}
+
+.page-form {
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align:left;
+  padding-bottom: 70px;
+  input {
+    padding: 10px;
+    font-family: "Arial Narrow", sans-serif;
+    font-size: 20px;
+    border-bottom: 2px solid #ff001e;
+    @media (min-width: @screen-sm) {
+      font-size: 30px;
+    }
+    &:focus {
+      outline: none;
+      //border: 2px solid #ff001e;
+      //border-radius: 25px;
+    }
+  }
+}
+
+.btn {
+  background-color: #ff001e;
+  border-radius: 15px;
+  padding: 16px 26px;
+  border: 2px solid #ff001e;
+  color:#fff;
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  transition: all 400ms ease-in-out;
+  @media (min-width: @screen-sm) {
+    font-size: 30px;
+  }
+  &:hover {
+    color: #ff001e;
+    background-color: #fff;
+  }
+}
+
+.page-footer {
+  background-color: #313131;
+  &__inner {
+    padding: 70px 20px 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    @media (min-width: @screen-sm) {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+  &__list {
+    &:last-child {
+      @media (min-width: @screen-sm) {
+        text-align: right;
+      }
+    }
+  }
+  &__item {
+    font-size: 24px;
+    color: #fff;
+    a {
+      font-size: 24px;
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+}
